@@ -1,10 +1,10 @@
 {
   "name": "aula09",
   "version": "1.0.0",
-  "description": "Abra a pasta do projeto\r Clique Terminal\r Clique em New Terminal\r Digite: npm init -y\r Pressione ENTER\r Crie uma pasta “src”\r Crie uma pasta “test”\r Abra o arquivo package.json\r Altere o valor da propriedade “type” e “commonjs” para “module”\r Instale o package “mocha” no seu projeto digitando npm i mocha no Terminal",
+  "description": "Gerenciamento e teste de serviços de pagamento",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
