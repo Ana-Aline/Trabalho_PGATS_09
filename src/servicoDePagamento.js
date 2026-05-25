@@ -2,7 +2,7 @@ export default class ServicoDePagamento {
     #pagamentos
 
     constructor() {
-        this.pagamentos = [];
+        this.#pagamentos = [];
     }  
 
     //método para realizar pagamento
@@ -16,13 +16,13 @@ export default class ServicoDePagamento {
             categoria
         };
 
-        this.pagamentos.push(novoPagamento);    }
+        this.#pagamentos.push(novoPagamento);    }
 
     //método para listar último pagamento
     consultarUltimoPagamento() {
-        if (this.pagamentos.length === 0) {
+        if (this.#pagamentos.length === 0) {
             return null;
         }
-        return this.pagamentos.at(-1);
+        return this.#pagamentos.at(-1);
     }
 }
