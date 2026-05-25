@@ -1,26 +1,69 @@
-Abra a pasta do projeto
-Clique Terminal
-Clique em New Terminal
-Digite: npm init -y
-Pressione ENTER
-Crie uma pasta “src”
-Crie uma pasta “test”
-Abra o arquivo package.json
-Altere o valor da propriedade “type” e “commonjs” para “module”
-Instale o package “mocha” no seu projeto digitando npm i mocha no Terminal
+# Serviço de Pagamento
 
-exercício:
-Crie uma classe que possua dois métodos: um para realizar pagamento e outro para consultar o último pagamento. Pagamentos serão armazenados como objetos Javascript dentro de uma lista de pagamentos. Cada pagamento terá as propriedades: Código de Barras, Empresa e Valor. Quando um pagamento for realizado e o valor for maior que 100.00, o pagamento também terá a propriedade categoria como 'cara', caso contrário, a propriedade categoria ficará como 'padrão'. O método de consultar trará apenas o último pagamento.
-  
-  ex. 
-  const servicoDePagamento = new ServicoDePagamento();
-  servicoDePagamento.pagar('0987-7656-3475', 'Samar', 156.87);
-  console.log(servicoDePagamento.consultarUltimoPagamento());
-  {
-     codigoBarras: '0987-7656-3475',
-     empresa: 'Samar',
-     valor: 56.87,
-     categoria: 'cara'
-  }
-  
-  A entregua deve ser realizada via Github e o repositório deve ter a classe a pasta src e os testes dos métodos dessa classe dentro da pasta test usando Mocha e Node Assert.
+Projeto em Node.js que implementa uma classe para registrar pagamentos e retornar o último pagamento realizado.
+
+## Visão geral
+
+A classe `ServicoDePagamento` oferece:
+
+- `pagar(codigoBarras, empresa, valor)` para registrar um pagamento;
+- `consultarUltimoPagamento()` para retornar apenas o último pagamento registrado;
+- armazenamento interno em uma lista de objetos JavaScript;
+- categoria automática: `cara` quando o valor for maior que `100.00`, caso contrário `padrão`.
+
+## Estrutura do projeto
+
+- `src/servicoDePagamento.js` - implementação da classe de pagamento
+- `test/servicoDePagamento.test.js` - testes usando Mocha e `node:assert`
+- `package.json` - configuração do projeto e script de teste
+
+## Instalação
+
+1. Abra a pasta do projeto.
+2. Execute:
+
+```bash
+npm install
+```
+
+> O projeto usa `type: "module"` no `package.json` para habilitar ES Modules.
+
+## Uso
+
+Exemplo de uso:
+
+```javascript
+import ServicoDePagamento from './src/servicoDePagamento.js';
+
+const servicoDePagamento = new ServicoDePagamento();
+servicoDePagamento.pagar('0987-7656-3475', 'Samar', 156.87);
+const ultimo = servicoDePagamento.consultarUltimoPagamento();
+console.log(ultimo);
+```
+
+Saída esperada:
+
+```json
+{
+  "codigoBarras": "0987-7656-3475",
+  "empresa": "Samar",
+  "valor": 156.87,
+  "categoria": "cara"
+}
+```
+
+## Testes
+
+Execute os testes com:
+
+```bash
+npm test
+```
+
+O projeto usa Mocha com `node:assert` para validar o comportamento da classe.
+
+## Observações
+
+- `consultarUltimoPagamento()` retorna `null` quando não há pagamentos registrados.
+- Para valores maiores que `100.00`, a categoria é `cara`.
+- Para valores iguais ou menores que `100.00`, a categoria é `padrão`.
