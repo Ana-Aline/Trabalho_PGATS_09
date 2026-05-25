@@ -19,7 +19,10 @@ export default class ServicoDePagamento {
         this.pagamentos.push(novoPagamento);    }
 
     //método para listar último pagamento
-    listarUltimoPagamento() {
-
+    consultarUltimoPagamento() {
+        if (this.pagamentos.length === 0) {
+            return null;
+        }
+        return this.pagamentos.at(-1);
     }
 }
