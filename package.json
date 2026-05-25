@@ -2,7 +2,7 @@
   "name": "aula09",
   "version": "1.0.0",
   "description": "Gerenciamento e teste de serviços de pagamento",
-  "main": "index.js",
+  "main": "src/servicoDePagamento.js",
   "scripts": {
     "test": "mocha"
   },
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "dependencies": {
+  "devDependencies": {
     "mocha": "^11.7.6"
   }
 }
