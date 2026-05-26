@@ -4,13 +4,15 @@
   "description": "Gerenciamento e teste de serviços de pagamento",
   "main": "src/servicoDePagamento.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "mocha": "^11.7.6"
+    "mocha": "^11.7.6",
+    "mochawesome": "^7.1.4",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
