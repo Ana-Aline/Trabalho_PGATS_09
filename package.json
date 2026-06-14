@@ -5,7 +5,7 @@
   "main": "src/servicoDePagamento.js",
   "scripts": {
     "test": "mocha --reporter mochawesome",
-    "coverage": "c8 mocha",
+    "coverage": "c8 mocha --reporter mochawesome",
     "coverage:report": "c8 mocha && open coverage/index.html",
     "lint": "eslint src/ test/",
     "lint:fix": "eslint src/ test/ --fix"
