@@ -15,10 +15,10 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "c8": "^11.0.0",
+    "eslint": "^8.56.0",
     "mocha": "^11.7.6",
     "mochawesome": "^7.1.4",
-    "mochawesome-report-generator": "^6.3.2",
-    "eslint": "^8.56.0",
-    "c8": "^9.1.0"
+    "mochawesome-report-generator": "^6.3.2"
   }
 }

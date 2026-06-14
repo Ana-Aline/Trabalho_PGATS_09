@@ -239,7 +239,6 @@ A solução implementa um **Quality Gate robusto** que valida o código automati
 - **Quality Gate:** Barreira automática que impede código defeituoso na produção
 - **Shift-Left:** Testes ocorrem no início do pipeline (antes de deploy)
 - **Artefatos:** Evidências de execução armazenadas no GitHub
-- **Matriz de Testes:** (Futuro) Executar em múltiplas versões do Node.js
 - **Análise de Root Cause:** Relatórios sempre gerados para investigação de falhas
 
 ---
@@ -272,7 +271,8 @@ A solução implementa um **Quality Gate robusto** que valida o código automati
 
 ## 👤 Autor
 
-Trabalho desenvolvido como requisito da disciplina de Qualidade em Testes na pós-graduação.
+![Ana Aline](https://avatars.githubusercontent.com/u/50156321?v=4&size=64)
+
 
 ## 📝 Notas Importantes
 
