@@ -1,5 +1,5 @@
 export default class ServicoDePagamento {
-    #pagamentos
+    #pagamentos;
 
     constructor() {
         this.#pagamentos = [];

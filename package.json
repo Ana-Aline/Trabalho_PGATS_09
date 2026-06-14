@@ -4,7 +4,11 @@
   "description": "Gerenciamento e teste de serviços de pagamento",
   "main": "src/servicoDePagamento.js",
   "scripts": {
-    "test": "mocha --reporter mochawesome"
+    "test": "mocha --reporter mochawesome",
+    "coverage": "c8 mocha",
+    "coverage:report": "c8 mocha && open coverage/index.html",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint src/ test/ --fix"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,8 @@
   "devDependencies": {
     "mocha": "^11.7.6",
     "mochawesome": "^7.1.4",
-    "mochawesome-report-generator": "^6.3.2"
+    "mochawesome-report-generator": "^6.3.2",
+    "eslint": "^8.56.0",
+    "c8": "^9.1.0"
   }
 }
