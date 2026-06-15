@@ -2,7 +2,7 @@ name: Continuous Testing Pipeline
 
 on:
   schedule:
-    - cron: '*/5 * * * *'    
+    - cron: '*/5 * * * *'
   push:
     branches:
       - main
