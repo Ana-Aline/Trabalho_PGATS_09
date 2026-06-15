@@ -3,7 +3,7 @@ name: Continuous Testing Pipeline
 on:
   workflow_dispatch:
   schedule:
-    - cron: '19 * * * *'    
+    - cron: '*/5 * * * *'    
   push:
     branches:
       - main
